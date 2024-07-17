@@ -31,3 +31,16 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Add this below the existing content */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-gradient-to-r {
+  background: linear-gradient(90deg, rgba(91,14,214,1) 0%, rgba(229,9,134,1) 50%, rgba(255,87,34,1) 100%);
+}
+
+.noise {
+  background: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+}
