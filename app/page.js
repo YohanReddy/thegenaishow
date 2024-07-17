@@ -24,24 +24,27 @@ export default function Home() {
           <Image 
             src="https://thegenai.show/wp-content/uploads/2024/06/Screenshot-2024-06-03-at-8.47.49-PM.png" 
             alt="The Gen AI Show" 
-            width={32} 
-            height={32} 
+            width={64} 
+            height={64} 
+            href="/"
           />
           <nav className="space-x-4">
             <a href="#about" className="hover:underline">About</a>
             <a href="#categories" className="hover:underline">Categories</a>
             <a href="#timeline" className="hover:underline">Timeline</a>
             <a href="#contact" className="hover:underline">Contact</a>
+            <Link href="/register" className="bg-rose-500 text-white px-4 py-2 rounded-lg">Register</Link>
+            <Link href={user.username} className="bg-rose-500 text-white px-4 py-2 rounded-lg">Portfolio</Link>
           </nav>
         </div>
       </header>
 
       <main className="container mx-auto px-6 max-w-6xl">
         <section className="text-center my-20">
+          <div>Hello, <strong>{user.fullName} </strong>welcome to The Gen AI Show</div>
+          <br/>
           <h2 className="text-5xl font-extrabold mb-4">World’s Largest Platform for Kids to Showcase Their Generative AI Talent</h2>
           <p className="text-xl">Generative AI is Redefining the Human Life. The change is happening at the speed of light and we need to make our children ready for it.</p>
-          <div>Hello, @{user.username} {user.fullName} welcome to Clerk</div>
-          <Link href={user.username}> <a>PROFILE</a> </Link>
         </section>
 
         <section id="about" className="my-20 text-center">

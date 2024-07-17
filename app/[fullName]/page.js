@@ -2,6 +2,7 @@
 import { useUser } from "@clerk/nextjs";
 import { useState } from "react";
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function fullName() {
@@ -24,6 +25,21 @@ export default function fullName() {
 
   
     return (
+      <>
+            <header className="bg-white text-black w-full">
+        <div className="container mx-auto flex justify-between items-center px-6 max-w-6xl">
+          <Image 
+            src="https://thegenai.show/wp-content/uploads/2024/06/Screenshot-2024-06-03-at-8.47.49-PM.png" 
+            alt="The Gen AI Show" 
+            width={64} 
+            height={64} 
+          />
+          <nav className="space-x-4">
+            <Link href="/" className="bg-rose-500 text-white px-4 py-2 rounded-lg">Home</Link>
+            <Link href="/register" className="bg-rose-500 text-white px-4 py-2 rounded-lg">Register</Link>
+          </nav>
+        </div>
+      </header>
          <div className="min-h-screen bg-white flex flex-col items-center p-4 text-black">
          <div className="flex flex-col items-center">
            <div className="rounded-full overflow-hidden w-32 h-32">
@@ -86,6 +102,7 @@ export default function fullName() {
            )}
          </div>
        </div>
+       </>
      );
     }
     
